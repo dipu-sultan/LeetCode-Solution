@@ -1,6 +1,5 @@
-#include <iostream>
-#include <vector>
-#include <set>
+#include<bits/stdc++.h>
+using namespace std;
 
 class Solution {
 public:
