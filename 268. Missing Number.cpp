@@ -96,6 +96,25 @@ public:
 
     
 };
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        
+        std::vector<int>v, p;
+        sort(nums.begin(), nums.end());
+        int x=nums.size();
+       // int mxn=*max_element(nums.begin(), nums.end());
+        int a=x*(x+1)/2;
+        int b=accumulate(nums.begin(), nums.end(), 0);
+        return a-b;
+
+      
+    }
+
+
+    
+};
 */
 int main()
 {
