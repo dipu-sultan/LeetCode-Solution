@@ -3,6 +3,22 @@ using namespace std;
 
 class Solution{
 public:
+    int singleNumber(vector<int>& v)
+    {
+        int x=0;
+
+        for(int i=0; i<v.size(); i++)
+        {
+            x^=v[i];
+        }
+        return x;
+    }
+};
+
+
+/*
+class Solution{
+public:
     int singleNumber(vector<int>& x)
     {
         vector<int>v;
@@ -21,6 +37,7 @@ public:
     }
 };
 
+*/
 /*class Solution {
 public:
     int singleNumber(vector<int>&nums){
