@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
 class Solution {
 public:
     bool isAnagram(string s, string t) {
@@ -28,8 +29,28 @@ public:
        return true;
     }
 };
+*/
 
-
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+       unordered_map<char, int>mp;
+        if(s.length()!=t.length())
+        {
+            return false;
+        }
+        for(int i=0; i<s.length(); i++)
+        {
+            mp[s[i]]++;
+            mp[t[i]]--;
+        }
+        for(auto p: mp)
+        {
+            if(p.second!=0) return false;
+        }
+        return true;
+    }
+};
 
 /*class Solution {
 public:
